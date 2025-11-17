@@ -1,0 +1,235 @@
+<svg viewBox="0 0 1440 120" width="100%" height="120" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+  </defs>
+  <path d="M0,40 C360,160 1080,-40 1440,80 L1440,120 L0,120 Z" fill="url(#waveGradient)"/>
+</svg>
+
+سه موج انیمیشنی پشت هم
+
+اچ تی ام ال:
+<!-- Wavy Separator 3 - Triple Wave -->
+<div class="section-separator">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="animatedGradient" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#0ea5e9" />
+        <stop offset="50%" stop-color="#8b5cf6" />
+        <stop offset="100%" stop-color="#ec4899" />
+      </linearGradient>
+
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="4" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+
+    <!-- موج اول -->
+    <path d="M0,60 Q360,0 720,60 T1440,60"
+          fill="none"
+          stroke="url(#animatedGradient)"
+          stroke-width="6"
+          stroke-linecap="round"
+          filter="url(#glow)"/>
+
+    <!-- موج دوم -->
+    <path d="M0,70 Q360,20 720,70 T1440,70"
+          fill="none"
+          stroke="url(#animatedGradient)"
+          stroke-width="4"
+          stroke-linecap="round"
+          filter="url(#glow)"/>
+
+    <!-- موج سوم -->
+    <path d="M0,80 Q360,40 720,80 T1440,80"
+          fill="none"
+          stroke="url(#animatedGradient)"
+          stroke-width="2"
+          stroke-linecap="round"
+          filter="url(#glow)"/>
+  </svg>
+</div>
+
+سی س اس:
+.section-separator {
+  line-height: 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+.section-separator svg {
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+
+@keyframes moveGradient {
+  0% {
+    stop-color: #0ea5e9;
+  }
+  50% {
+    stop-color: #8b5cf6;
+  }
+  100% {
+    stop-color: #ec4899;
+  }
+}
+
+#animatedGradient stop {
+  animation: moveGradient 6s linear infinite alternate;
+}
+
+svg {
+  filter: drop-shadow(0 0 10px #9333ea);
+}
+
+
+----------------------------------------------------------------------------------------------------------
+
+تک موج با انیمیشن مدل 1:
+اچ تی ام ال:
+<div class="section-separator">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="animatedGradient">
+        <stop offset="0%" stop-color="#0ea5e9" />
+        <stop offset="50%" stop-color="#8b5cf6" />
+        <stop offset="100%" stop-color="#ec4899" />
+      </linearGradient>
+    </defs>
+    <path d="M0,60 Q360,0 720,60 T1440,60"
+          fill="none"
+          stroke="url(#animatedGradient)"
+          stroke-width="8"
+          stroke-linecap="round"
+          filter="url(#glow)"/>
+  </svg>
+</div>
+
+
+    <!-- مسیر موج -->
+    <path d="M0,80 Q360,0 720,80 T1440,80"
+          fill="none"
+          stroke="url(#movingGradient)"
+          stroke-width="10"
+          stroke-linecap="round"
+          filter="url(#glow)" />
+  </svg>
+</div>
+
+سی اس اس:
+.section-separator {
+  line-height: 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+.section-separator svg {
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+
+@keyframes moveGradient {
+  0% {
+    stop-color: #0ea5e9;
+  }
+  50% {
+    stop-color: #8b5cf6;
+  }
+  100% {
+    stop-color: #ec4899;
+  }
+}
+
+#animatedGradient stop {
+  animation: moveGradient 6s linear infinite alternate;
+}
+
+svg defs filter#glow {
+  filter: url(#glow);
+}
+
+svg defs {
+  filter: url(#glow);
+}
+
+svg {
+  filter: drop-shadow(0 0 10px #9333ea);
+}
+
+
+---------------------------------------------------------------------------------------------------
+
+<!-- Wavy Separator 4 - Zigzag Pattern -->
+<div class="section-separator">
+  <svg viewBox="0 0 1440 60" width="100%" height="60" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="waveStroke1" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#2563eb"/>
+        <stop offset="100%" stop-color="#9333ea"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,30 Q180,0 360,30 T540,30 T720,30 T900,30 T1080,30 T1260,30 T1440,30" fill="none" stroke="url(#waveStroke1)" stroke-width="8" stroke-linecap="round"/>
+  </svg>
+</div>
+
+سی اس اس:
+/* ========================================
+   FEATURES SECTION BACKGROUND - CHANGE HERE
+   ======================================== */
+
+->
+
+/* ========================================
+   WAVY SECTION SEPARATORS
+   ======================================== */
+.section-separator {
+  line-height: 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -1px;
+  z-index: 1;
+}
+
+.section-separator svg {
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+
+-----------------------------------------------------------------------------------------
+
+<!-- Wavy Separator 1 - Gentle Wave -->
+  <div class="section-separator">
+    <svg viewBox="0 0 1440 120" width="100%" height="120" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="aiGradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#0ea5e9"/>
+          <stop offset="50%" stop-color="#8b5cf6"/>
+          <stop offset="100%" stop-color="#ec4899"/>
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="4" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <path d="M0,80 Q360,0 720,80 T1440,80" fill="none" stroke="url(#aiGradient)" stroke-width="10" stroke-linecap="round" filter="url(#glow)" />
+    </svg>
+  </div>
+
+
